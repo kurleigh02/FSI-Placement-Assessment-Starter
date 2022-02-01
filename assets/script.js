@@ -40,7 +40,7 @@ function updateQuantity (displaycc){
    let CCTotal=document.querySelector ("#qty-cc")
    CCTotal.innerHTML=displaycc
 }
-let ChocolateChip =1;
+let ChocolateChip =0;
 ccminusBtn.addEventListener("click",function(e){
    if (ChocolateChip>0){
        ChocolateChip--
@@ -54,7 +54,7 @@ ccPlusBtn.addEventListener("click",function(e){
     
   })
 
-let sugar = 2
+let sugar = 0
  // Sugar Sprinkle
 var sugarPlusBtn=document.querySelector ("#add-sugar")
 var sugarminusBtn=document.querySelector ("#minus-sugar")
@@ -75,6 +75,16 @@ sugarPlusBtn.addEventListener("click", function (e) {
             console.log (SugarSprinkle)
             updateQuantity(SugarSprinkle)
 })
+
+var total = 0;
+var Quantity = 0
+function addToTable(Gingerbread) {
+    Quantity= Gingerbread;
+    var tbody = document.querySelector('#qty-gb');
+      tbody.innerHTML = tbody.innerHTML ;
+      document.getElementById("#qty-gb").innerHTML = total;
+}
+//for (var Gingerbread = 0, limit = cells.length; Gingerbread < limit; Gingerbread ++)
  
             // selecting the element with an id of credit
             var Credit = Gingerbread+ChocolateChip+SugarSprinkle
