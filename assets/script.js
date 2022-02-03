@@ -76,13 +76,13 @@ sugarPlusBtn.addEventListener("click", function (e) {
             updateQuantity(SugarSprinkle)
 })
 
-var total = 0;
+var Total = 0;
 var Quantity = 0
 function addToTable(Gingerbread) {
-    Quantity= Gingerbread;
+    Quantity= (Gingerbread +ChocolateChip+SugarSprinkle)
     var tbody = document.querySelector('#qty-gb');
       tbody.innerHTML = tbody.innerHTML ;
-      document.getElementById("#qty-gb").innerHTML = total;
+      document.getElementById("#qty-total").innerHTML = Total;
 }
 //for (var Gingerbread = 0, limit = cells.length; Gingerbread < limit; Gingerbread ++)
  
